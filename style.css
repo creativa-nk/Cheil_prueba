@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: auto;
+    font-family:'Geomanist-light' ;
+    letter-spacing: 1.5px;
+    color: #152A69;
+}
+@font-face{
+    font-family: 'Geomanist-light';
+    src: url('./fonts/Geomanist-Light-WZ.otf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'Geomanist-medium';
+    src: url('./fonts/Geomanist-Medium-WZ.otf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'Geomanist-bold';
+    src: url('./fonts/Geomanist-Bold-WZ.otf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'Geomanist-book';
+    src: url('./fonts/Geomanist-Book-WZ.otf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* -----NAVbar------ */
+nav{
+    width:100vw ;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    font-family: 'Geomanist-bold';
+}
+
+#inicio{
+    width: 100vw;
+    height: calc(100vh - 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#inicio .imagen{
+   background:#a4eedb;
+   width: 500px;
+   height: 700px;
+}
+.texto-inicio{
+    width: 40vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.texto-inicio .item{
+    margin-bottom: 40px;
+}
+.title{
+    font-family: 'Geomanist-book';
+    font-size: 50px; 
+    font-weight: 500;
+    letter-spacing: 3px; 
+}
+.title span{
+    -webkit-text-stroke: 1px #152A69;
+    color: #a4eedb;
+    font-size: 70px;
+    font-family: 'Geomanist-bold';
+}
+#inicio .button{
+    background: #e95153;
+    color: white;
+    width: 250px;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Geomanist-book';
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+p{
+    font-family:'Geomanist-light' ;
+}
