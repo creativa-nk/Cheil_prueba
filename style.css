@@ -261,8 +261,8 @@ p{
     -moz-border-radius:20px ;
     -ms-border-radius:20px ;
     -o-border-radius:20px ;
-   margin: 1rem;
-   text-align: right;
+    margin: 1rem;
+    text-align: right;
 }
 .canvas .titulo{
    font-size: 40px;
@@ -481,12 +481,25 @@ footer{
     }
 
     .container-cards{
-        width: 100vw;
-        display: flex;
-        justify-content: space-around;
-        overflow-x: auto;
+       /*  background: #e95153; */
+        width: 100%;
+        justify-content: flex-start;
+        overflow: auto;
+        overflow-y: hidden;
     }
-   
+    .cards{
+        /* background: rgba(255, 255, 0, 0.322); */
+        width: 600px;
+       /*  padding: 50px; */
+    }
+    .cards-1{
+        background: #e95153;
+        width: 600px;
+    }
+    .cards .item{
+        padding: 10px;
+    }
+  
 
     .container-canvas{
         width: 100%;
