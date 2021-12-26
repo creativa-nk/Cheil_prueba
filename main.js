@@ -1,4 +1,4 @@
-function vermas() {
+/* function vermas() {
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
     var btnText = document.getElementById("myBtn");
@@ -13,4 +13,4 @@ function vermas() {
       document.getElementById("menos").style.display="inline";
       moreText.style.display = "inline";
     }
-  }
+  } */

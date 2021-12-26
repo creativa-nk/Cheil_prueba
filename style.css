@@ -54,6 +54,10 @@ section{
     font-size: 40px;
     padding: 30px;
 }
+.subtitulo{
+    font-family: 'Geomanist-medium';  
+    font-size: 25px;
+}
 
 /* -----NAVbar-------------------------------------- */
 nav{
@@ -158,10 +162,7 @@ p{
 .cards .item{
     padding: 20px;
 }
-.cards .subtitulo{
-    font-family: 'Geomanist-medium';  
-    font-size: 25px;
-}
+
 .icon{
     width: 200px;
     height: 200px;
@@ -326,11 +327,45 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
+    padding: 10px;
+    font-size: 1rem;
 }
 .container-preguntas{
     background: white;
-    width: 70%;
+    width: 80%;
     padding: 6rem;
 }
+.pregunta{
+    width: 100%;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--azul-marino);
+}
+.titulo-pregunta{
+    padding: 1rem 0;
+    width: 100%;
+    display:flex ;
+    justify-content: space-between;
 
+}
+
+.more {
+    display: none;
+}
+#dudas a{
+    text-decoration: none;
+    color: #233f8dc7;
+    cursor: pointer;  
+}
+#dudas ol {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    counter-reset: li-counter;
+}
+#dudas ol span{
+    font-size: .7rem;
+}
+svg{
+    margin-right: 1rem;
+}
