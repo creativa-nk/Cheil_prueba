@@ -335,26 +335,12 @@ p{
     width: 80%;
     padding: 6rem;
 }
-.pregunta{
-    width: 100%;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--azul-marino);
-}
 .titulo-pregunta{
     padding: 1rem 0;
     width: 100%;
     display:flex ;
     justify-content: space-between;
 
-}
-
-.more {
-    display: none;
-}
-#dudas a{
-    text-decoration: none;
-    color: #233f8dc7;
-    cursor: pointer;  
 }
 #dudas ol {
     list-style-type: none;
@@ -369,3 +355,67 @@ p{
 svg{
     margin-right: 1rem;
 }
+
+.dropdown,
+.dropdown__tab {
+    overflow: hidden;
+}
+
+.dropdown__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.dropdown__tab-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--azul-marino);
+}
+
+
+.dropdown__tab-content {
+    max-height: 0px;
+    padding: 0 15px;
+    transition: all .7s ease-in;
+    -webkit-transition: all .7s ease-in;
+    -moz-transition: all .7s ease-in;
+    -ms-transition: all .7s ease-in;
+    -o-transition: all .7s ease-in;
+}
+
+.dropdown__tab-label,
+.dropdown__tab-content p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.dropdown__checkbox:checked ~ .dropdown__tab-content {
+    max-height: 10000px;
+    padding: 15px;
+    border-bottom: 1px solid var(--azul-marino);
+}
+.dropdown__checkbox:checked ~ .dropdown__tab-label {
+    border-bottom: 0px solid var(--azul-marino);
+}
+.dropdown__checkbox:checked ~ .dropdown__tab-label svg {
+ animation: rotate .5s linear forwards;
+ -webkit-animation: rotate .5s linear forwards;
+}
+@keyframes rotate {
+    to{
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+}
+
+
+
+
