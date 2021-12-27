@@ -64,23 +64,25 @@ section{
 /* -----NAVbar-------------------------------------- */
 nav{
     width:100vw ;
-    height: 7rem;
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
     font-family: 'Geomanist-bold';
+    position: fixed;
+    z-index: 2000;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(181,237,219,1) 56%);
 }
 .logo{
     height: 100%;
-    padding: 1rem;
+    padding: 10px;
 }
 .logo-derecha{
     font-size: .7rem;
 }
 .logo img{
     height: 100%;
-    padding: 1.5rem;
 }
 
 
@@ -89,18 +91,19 @@ nav{
 
 #inicio{
     /* background: violet; */
-    height: calc(100vh - 7rem);
+    height:100vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(181,237,219,1) 56%);
 }
 #inicio .imagen{
-   /* background:#a4eedb; */
-   width: 40%;
-   height: auto;
+   width: auto;
+   height: 90vh;
+   margin-top: 4rem;
 }
 #inicio .imagen img{
-    width: 100%;
+    height: 100%;
 }
 .texto-inicio{
     width: 40vw;
@@ -478,21 +481,35 @@ footer h1{
 
 
 /* ------------@mediaQuery---------------------------------------- */
+@media only screen and (max-width: 1024px){
+    #inicio .imagen{
+        width: 40vw;
+        height: 80vh;
+     }
+}
 @media only screen and (max-width: 768px){
     #inicio{
         flex-direction: column;
         text-align: center;
         font-size: .8rem;
     }
+  
+     #inicio .imagen img{
+         width: 100%;
+     }
     .texto-inicio{
-        width: 80vw;
+        width: 100vw;
         align-items: center;
+        padding: 0 3rem;
     }
     #inicio .imagen{
         /* background:#a4eedb; */
-        width: 70%;
+        width: 60%;
         height: auto;
-        padding: 1em;
+        margin-top: 6rem;
+    }
+    .title{ 
+        font-size: 2rem;
     }
  /* ---------------------------------------------- */
     #beneficios{
@@ -610,18 +627,26 @@ footer h1{
     }
     .button{
         width: 200px;
-        padding: 1rem 1rem; 
+        padding: .7rem 1rem; 
+        font-size: .8rem;
     }
+    #inicio .imagen{
+        /* background:#a4eedb; */
+        width: 70%;
+        height: auto;
+        margin-top: 6rem;
+    }
+   
 
     .title{
-        font-size: 1.5rem; 
+        font-size: 1.2rem; 
     }
     .title span{
         font-size: 2.5rem;
     }
    
     #beneficios .titulo{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     /* --------------------------------- */
   
