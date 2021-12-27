@@ -614,7 +614,6 @@ footer h1{
     }
  /* -------------------------------------- */
     .container-canvas{
-        width: 100%;
         grid-template-columns: 1fr;
         grid-template-rows: .5fr .5fr 1fr; 
         padding: 0rem;
