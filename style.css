@@ -485,8 +485,14 @@ footer h1{
         font-size: .8rem;
     }
     .texto-inicio{
-        width: 70vw;
+        width: 80vw;
         align-items: center;
+    }
+    #inicio .imagen{
+        /* background:#a4eedb; */
+        width: 70%;
+        height: auto;
+        padding: 1em;
     }
  /* ---------------------------------------------- */
     #beneficios{
@@ -512,7 +518,7 @@ footer h1{
         padding: .2rem;
     }
     #como_funZiona .titulo{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .container-como{
         width: 100%;
@@ -602,13 +608,11 @@ footer h1{
     .logo img{
         padding: 0rem;
     }
-
-    #inicio .imagen{
-        /* background:#a4eedb; */
-        width: 100%;
-        height: auto;
-        padding: 1em;
+    .button{
+        width: 200px;
+        padding: 1rem 1rem; 
     }
+
     .title{
         font-size: 1.5rem; 
     }
@@ -619,6 +623,8 @@ footer h1{
     #beneficios .titulo{
         font-size: 1.5rem;
     }
+    /* --------------------------------- */
+  
     /* ------------------------------------------ */
     .container-canvas{
         width: 100%;
