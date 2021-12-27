@@ -49,7 +49,7 @@ body{
 ::-webkit-scrollbar {display: none;}
 section{
     width:100vw;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
 }
 .titulo{
     font-family: 'Geomanist-bold';
@@ -169,8 +169,8 @@ p{
 }
 
 .icon{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -181,6 +181,7 @@ p{
    position: relative; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
    width: 20em;
    height: 20em;
+   cursor: pointer;
  } 
  .card{
     position: absolute;   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -195,7 +196,7 @@ p{
     transform:rotateY(0deg);     /* <<<<< ----animacion----- */
     transform-style: preserve-3d;
     transition: 0.5s cubic-bezier(0.4, 0.2, 0.2, 1) ;
-    backface-visibility: hidden;  /* para ocultar la cara opuesta */
+    backface-visibility: hidden;  /* para ocultar la cara opuesta */  
  }
  .card_container:nth-child(1) .front,
  .card_container:nth-child(1) .back{
@@ -468,46 +469,45 @@ footer{
     background: var(--azul-marino);
     width: 100vw;
     height: 15rem;
+    color: var(--beig);
+}
+footer h1{
+    margin: 0 2rem;
 }
 
 
 
 /* ------------@mediaQuery---------------------------------------- */
-@media only screen and (max-width: 425px) {
-    nav{
-        height: 4rem;
-    }
-    .logo{
-        padding: 10px;
-    }
-    .logo img{
-        padding: 0rem;
-    }
+@media only screen and (max-width: 768px){
     #inicio{
         flex-direction: column;
         text-align: center;
         font-size: .8rem;
     }
-
-    #inicio .imagen{
-        /* background:#a4eedb; */
-        width: 100%;
-        height: auto;
-        padding: 1em;
-    }
-    .title{
-        font-size: 1.5rem; 
-    }
-    .title span{
-        font-size: 2.5rem;
-    }
     .texto-inicio{
         width: 70vw;
         align-items: center;
     }
-    #beneficios .titulo{
-        font-size: 1.5rem;
+ /* ---------------------------------------------- */
+    #beneficios{
+        background: var(--gris);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    .container-cards{
+        flex-direction: column;
+    }
+    .card_container{
+        margin-bottom: 2rem;
+        width: 18em;
+        height: 18em;
+    }
+    .back,.front{
+        padding:2em ;
+    }
+ /* ------------------------------------------- */
     #como_funZiona{
         padding: .2rem;
     }
@@ -528,84 +528,117 @@ footer{
         font-size: 5em;
         top: 20px;
     }
-    #beneficios{
-        background: var(--gris);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container-cards{
-        flex-direction: column;
-    }
-    .card_container{
-        margin-bottom: 2rem;
-    }
-  
-
+ /* -------------------------------------- */
     .container-canvas{
         width: 100%;
         grid-template-columns: 1fr;
-        grid-template-rows: .5fr .5fr 1fr;
-       
+        grid-template-rows: .5fr .5fr 1fr; 
+        padding: 0rem;
+        column-gap: 20px; 
+        row-gap: 20px;
     }
-    .canvas{
-        width: 100%;
-        margin: 0;
-        margin-bottom: 1rem;
+    .canvas-3{
+        grid-column: 1/2;
+        grid-row: 3/4;
     }
     .canvas .button{
         width: auto;
         padding: 1.5rem 3rem;
         margin: 1rem auto;
     }
-
-    .canvas-3{
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-    
     .canvas{
         width: 100%;
         display: flex;
         justify-content: center;
         text-align: center;
         flex-direction: column;
+        margin: 0;
     }
+    .canvas .titulo{
+        padding: 20px;
+    }
+  
     .canvas-1 img{
         order: 3;
     }
-    
+    .canvas-3 img{
+        padding: 1rem 0;
+      }
     .imagen1{
-        margin: 1rem 0 0 10px;  
+        margin: 10px 0 0 10px;  
     }
     .canvas-2{
         flex-direction: column-reverse;
+        
     }
+  
     .imagen1{
-        shape-outside: url('./img/canvas1.png');
-        shape-image-threshold: 0.5;
-        shape-margin: 30px;
-        float: left;
         width: 100%;
         padding: 0 1rem;
     }
-    .imagen2{
-        width: 80%;
-        padding: 0 1rem;
-    }
-    #dudas{
-        text-align: center;
-    }
+   
+   
+    /* ----------------------------------- */
     .container-preguntas{
         padding: 0rem;
         text-align: left;
         width: 90%;
     }
     .container-preguntas h2{
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-right: 20px;
     }
+
+
+}
+
+@media only screen and (max-width: 425px) {
+    nav{
+        height: 4rem;
+    }
+    .logo{
+        padding: 10px;
+    }
+    .logo img{
+        padding: 0rem;
+    }
+
+    #inicio .imagen{
+        /* background:#a4eedb; */
+        width: 100%;
+        height: auto;
+        padding: 1em;
+    }
+    .title{
+        font-size: 1.5rem; 
+    }
+    .title span{
+        font-size: 2.5rem;
+    }
+   
+    #beneficios .titulo{
+        font-size: 1.5rem;
+    }
+    /* ------------------------------------------ */
+    .container-canvas{
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr .5fr 1fr;  
+    }
+    
+    .canvas-3{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+   
+    /* ------------------------------- */
+    #dudas{
+        text-align: center;
+    }
+    .container-preguntas h2{
+        font-size: 1rem;
+    }
+  
     .container-svg{
         margin-right: 0;
         margin: 10px;
