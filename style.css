@@ -117,8 +117,8 @@ nav{
 
 #inicio img:nth-child(1){
     opacity: 0;
-    animation:zoomIn .5s .7s linear forwards, rotar 3s 1.5s ease infinite ;
-    -webkit-animation:zoomIn .5s .7s linear forwards, rotar 3s 1.5s ease infinite ;
+    animation:zoomIn .5s .7s linear forwards, rotar 7s 2s ease infinite ;
+    -webkit-animation:zoomIn .5s .7s linear forwards, rotar 7s 2s ease infinite ;
 }
 #inicio img:nth-child(2){
     filter: drop-shadow(30px 3px 20px rgba(0, 0, 0, .4));
@@ -133,6 +133,8 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+/*     animation:zoomIn .5s  linear forwards;
+    -webkit-animation:zoomIn .5s  linear forwards; */
 }
 .texto-inicio .item{
     margin-bottom: 1rem;
@@ -654,7 +656,50 @@ footer h1{
     #inicio .imagen{
         margin-top: 6rem;
     }
-   
+    #inicio img:nth-child(1){
+        opacity: 0;
+        animation:zoomIn .5s .7s linear forwards, rotarMovil 3s 2s ease infinite ;
+        -webkit-animation:zoomIn .5s .7s linear forwards, rotarMovil 3s 2s ease infinite ;
+}
+    @keyframes rotarMovil{
+
+        0% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+          }
+        
+          
+          25% {
+            -webkit-transform:  rotate3d(0, 0, 1, -5deg);
+            transform:  rotate3d(0, 0, 1, -5deg);
+            -moz-transform:  rotate3d(0, 0, 1, -5deg);
+            -ms-transform:  rotate3d(0, 0, 1, -5deg);
+            -o-transform:  rotate3d(0, 0, 1, -5deg);
+}
+        
+          
+          50%{
+            -webkit-transform:  rotate3d(0, 0, 1, 5deg);
+            transform:  rotate3d(0, 0, 1, 5deg);
+            -moz-transform:  rotate3d(0, 0, 1, 5deg);
+            -ms-transform:  rotate3d(0, 0, 1, 5deg);
+            -o-transform:  rotate3d(0, 0, 1, 5deg);
+}
+        
+         
+          75% {
+            -webkit-transform:   rotate3d(0, 0, 1, -5deg);
+            transform:   rotate3d(0, 0, 1, -5deg);
+            -moz-transform:   rotate3d(0, 0, 1, -5deg);
+            -ms-transform:   rotate3d(0, 0, 1, -5deg);
+            -o-transform:   rotate3d(0, 0, 1, -5deg);
+}
+        
+          to {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+          }
+    }
 
     .title{
         font-size: 1.2rem; 
@@ -773,20 +818,7 @@ footer h1{
 }
 
 @keyframes rotar{
-   /*  25%{
-        transform: rotate(5deg);
-        -webkit-transform: rotate(5deg);
-        -moz-transform: rotate(5deg);
-        -ms-transform: rotate(5deg);
-        -o-transform: rotate(5deg);
-    }
-    75%{
-        transform: rotate(-5deg);
-        -webkit-transform: rotate(-5deg);
-        -moz-transform: rotate(-5deg);
-        -ms-transform: rotate(-5deg);
-        -o-transform: rotate(-5deg);
-    } */
+
     0% {
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
@@ -794,29 +826,29 @@ footer h1{
     
       
       25% {
-        -webkit-transform:  rotate3d(0, 0, 1, -3deg);
-        transform:  rotate3d(0, 0, 1, -3deg);
-        -moz-transform:  rotate3d(0, 0, 1, -3deg);
-        -ms-transform:  rotate3d(0, 0, 1, -3deg);
-        -o-transform:  rotate3d(0, 0, 1, -3deg);
+        -webkit-transform:  rotate3d(0, 0, 1, -1deg);
+        transform:  rotate3d(0, 0, 1, -1deg);
+        -moz-transform:  rotate3d(0, 0, 1, -1deg);
+        -ms-transform:  rotate3d(0, 0, 1, -1deg);
+        -o-transform:  rotate3d(0, 0, 1, -1deg);
 }
     
       
       50%{
-        -webkit-transform:  rotate3d(0, 0, 1, 5deg);
-        transform:  rotate3d(0, 0, 1, 5deg);
-        -moz-transform:  rotate3d(0, 0, 1, 5deg);
-        -ms-transform:  rotate3d(0, 0, 1, 5deg);
-        -o-transform:  rotate3d(0, 0, 1, 5deg);
+        -webkit-transform:  rotate3d(0, 0, 1, 1deg);
+        transform:  rotate3d(0, 0, 1, 1deg);
+        -moz-transform:  rotate3d(0, 0, 1, 1deg);
+        -ms-transform:  rotate3d(0, 0, 1, 1deg);
+        -o-transform:  rotate3d(0, 0, 1, 1deg);
 }
     
      
       75% {
-        -webkit-transform:   rotate3d(0, 0, 1, -5deg);
-        transform:   rotate3d(0, 0, 1, -5deg);
-        -moz-transform:   rotate3d(0, 0, 1, -5deg);
-        -ms-transform:   rotate3d(0, 0, 1, -5deg);
-        -o-transform:   rotate3d(0, 0, 1, -5deg);
+        -webkit-transform:   rotate3d(0, 0, 1, -1deg);
+        transform:   rotate3d(0, 0, 1, -1deg);
+        -moz-transform:   rotate3d(0, 0, 1, -1deg);
+        -ms-transform:   rotate3d(0, 0, 1, -1deg);
+        -o-transform:   rotate3d(0, 0, 1, -1deg);
 }
     
       to {
