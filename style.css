@@ -546,7 +546,7 @@ footer h1{
     #inicio .imagen img{
         max-width: 100%; 
         height: 100%;
-        left: 20%;
+      /*   left: 20%; */
     }
     .title{ 
         font-size: 2rem;
