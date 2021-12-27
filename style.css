@@ -475,7 +475,13 @@ footer{
 /* ------------@mediaQuery---------------------------------------- */
 @media only screen and (max-width: 425px) {
     nav{
-        height: 7rem;
+        height: 4rem;
+    }
+    .logo{
+        padding: 10px;
+    }
+    .logo img{
+        padding: 0rem;
     }
     #inicio{
         flex-direction: column;
@@ -485,9 +491,9 @@ footer{
 
     #inicio .imagen{
         /* background:#a4eedb; */
-        width: 80%;
+        width: 100%;
         height: auto;
-        padding: 1rem;
+        padding: 1em;
     }
     .title{
         font-size: 1.5rem; 
