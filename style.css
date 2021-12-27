@@ -81,6 +81,9 @@ nav{
 .logo-derecha{
     font-size: .7rem;
 }
+#logo-extra{
+    display: none;
+}
 .logo img{
     height: 100%;
 }
@@ -98,12 +101,31 @@ nav{
     background: linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(181,237,219,1) 56%);
 }
 #inicio .imagen{
+   position: relative;
+   margin-right: 50%;
    width: auto;
    height: 90vh;
    margin-top: 4rem;
 }
 #inicio .imagen img{
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#inicio img:nth-child(1){
+    opacity: 0;
+    animation:zoomIn .6s .6s linear forwards ;
+    -webkit-animation:zoomIn .6s .6s linear forwards ;
+}
+#inicio img:nth-child(2){
+    filter: drop-shadow(30px 3px 20px rgba(0, 0, 0, .4));
+    -webkit-filter: drop-shadow(30px 3px 20px rgba(0, 0, 0, .4));
+    opacity: 0;
+    animation: bounceIn 1s .3s linear forwards;
+    -webkit-animation: bounceIn 1s .3s linear forwards;
 }
 .texto-inicio{
     width: 40vw;
@@ -494,19 +516,23 @@ footer h1{
         font-size: .8rem;
     }
   
-     #inicio .imagen img{
+ /*     #inicio .imagen img{
          width: 100%;
-     }
+     } */
     .texto-inicio{
         width: 100vw;
         align-items: center;
         padding: 0 3rem;
     }
     #inicio .imagen{
-        /* background:#a4eedb; */
-        width: 60%;
-        height: auto;
+        margin-right: 20%;
         margin-top: 6rem;
+    }
+    #inicio .imagen{
+        /* background:#a4eedb; */
+      /*   width: 60%;
+        height: auto;
+        margin-top: 6rem; */
     }
     .title{ 
         font-size: 2rem;
@@ -631,9 +657,6 @@ footer h1{
         font-size: .8rem;
     }
     #inicio .imagen{
-        /* background:#a4eedb; */
-        width: 70%;
-        height: auto;
         margin-top: 6rem;
     }
    
@@ -687,4 +710,69 @@ footer h1{
         width: 150px;
         height: 150px;
     }
+  }
+/* ========================ANIMACIONES=========================== */
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    20% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    40% {
+      -webkit-transform: scale3d(0.9, 0.9, 0.9);
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: scale3d(1.03, 1.03, 1.03);
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+      -webkit-transform: scale3d(0.97, 0.97, 0.97);
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        -moz-transform: scale3d(1, 1, 1);
+        -ms-transform: scale3d(1, 1, 1);
+        -o-transform: scale3d(1, 1, 1);
+}
   }
