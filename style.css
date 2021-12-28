@@ -43,6 +43,7 @@ body{
     height: auto;
     font-family:'Geomanist-light' ;
     font-size: 1.2rem;
+    font-weight: bold;
     letter-spacing: 1px;
     color: var(--azul-marino);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  /*para borrar el recuadro azul que aparece por defecto con onclick*/
@@ -73,7 +74,7 @@ nav{
     font-family: 'Geomanist-bold';
     position: fixed;
     z-index: 2000;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(181,237,219,1) 56%);
+    background: linear-gradient(-90deg, rgba(255,255,255,1) 19%, rgba(181,237,219,1) 56%);
 }
 .logo{
     height: 100%;
@@ -100,7 +101,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content:space-around ;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(181,237,219,1) 56%);
+    background: linear-gradient(-90deg, rgba(255,255,255,1) 19%, rgba(181,237,219,1) 56%);
 }
 #inicio .imagen{
    position: relative;
@@ -118,9 +119,11 @@ nav{
 }
 
 #inicio img:nth-child(1){
+    filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, .4));
     opacity: 0;
     animation:zoomIn .3s .5s linear forwards;
     -webkit-animation:zoomIn .3s .5s linear forwards;
+    -webkit-filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, .4));
 }
 #inicio img:nth-child(2){
     filter: drop-shadow(30px 3px 20px rgba(0, 0, 0, .4));
@@ -148,7 +151,7 @@ nav{
     font-weight: 500;
 }
 .title span .extra{
-    color: var(--beig);
+    color: #00C6C5;
     -webkit-text-stroke: 1px var(--azul-marino);
 }
 .title span{
