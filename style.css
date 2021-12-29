@@ -1,5 +1,6 @@
 :root {
     --rojo: #e95153;
+    --azul-fuerte:#00C6C5;
     --azul-marino:#152A69;
     --verde-claro:#B5EDDB;
     --lila:#D6D9ED;
@@ -37,6 +38,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+   }
 body{
     width: 100vw;
     overflow-x: hidden;
@@ -150,7 +154,7 @@ nav{
     font-size: 3rem; 
     font-weight: 500;
 }
-.title span .extra{
+.title span .extra, .titulo span .extra{
     color: #00C6C5;
     -webkit-text-stroke: 1px var(--azul-marino);
 }
@@ -162,8 +166,8 @@ nav{
 .button{
     background:var(--rojo);
     color: white;
-    width: 350px;
-    padding: 1.5rem 3rem;
+    width: 250px;
+    padding: 1.3rem 1rem;
     text-align: center;
     font-family: 'Geomanist-book';
     font-size: 1rem;
@@ -172,6 +176,10 @@ nav{
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
+}
+.button a{
+    text-decoration: none;
+    color: white;
 }
 .button:hover{
     transform: scale(1.1);
@@ -693,7 +701,7 @@ footer h1{
         padding: 0rem;
     }
     .button{
-        width: 200px;
+        width: 150px;
         padding: .7rem 1rem; 
         font-size: .8rem;
     }
